@@ -2049,9 +2049,8 @@ static void msm_isp_handle_done_buf_frame_id_mismatch(
 			buf->bufq_handle, buf->buf_idx);
 	else
 		ret = vfe_dev->buf_mgr->ops->buf_done(vfe_dev->buf_mgr,
-			buf->bufq_handle, buf->buf_idx, time_stamp,
-			frame_id,
-			stream_info->runtime_output_format);
+      	         	 buf->bufq_handle, buf->buf_idx, time_stamp,frame_id,
+                         stream_info->runtime_output_format);
 	if (ret == -EFAULT) {
 		msm_isp_halt_send_error(vfe_dev, ISP_EVENT_BUF_FATAL_ERROR);
 		return;
