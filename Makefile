@@ -633,6 +633,7 @@ CLANG_FLAGS    += $(call cc-option, -Wno-misleading-indentation)
 CLANG_FLAGS    += $(call cc-option, -Wno-bool-operation)
 KBUILD_CFLAGS	+= $(CLANG_FLAGS)
 KBUILD_AFLAGS	+= $(CLANG_FLAGS)
+CLANG_FLAGS	+= -fno-builtin-stpcpy
 endif
 
 # The arch Makefile can set ARCH_{CPP,A,C}FLAGS to override the default
